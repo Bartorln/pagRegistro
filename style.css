@@ -1,37 +1,75 @@
+:root{
+    --letras: #006400;
+    --fundo: #DAA520;
+    --borda: #006400;
+}
+
 *{
     margin: 0;
     padding: 0;    
 }
 
 body{
-    background-image: url(img/pexels-johannes-plenio-1567058.jpg); 
+    background-image: url(img/solo3.jpg); 
 }
 
 /*Menu de navegação - nav-bar*/
-
 .nav-bar{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    flex: 1 1 280px;
+    max-width: 760px;
+    margin: 0 auto;    
     height: 2em;
     justify-content: space-around;
     align-items: center;
-    margin-top: 1em;
-    
+    background-color: var(--fundo);
+    margin-top: 0.5em;
+    border-radius: 1em;
+    border: 2px solid var(--borda);       
 }
 
 .company, .doubts, .rgt, .site{
     text-decoration: none;
     font-family:'Times New Roman', Times, serif;
     font-size: 15px;
-    color: orangered;
+    color:var(--letras);
+    margin-left: 0.5em;
+}
+
+.company:hover{
+    color: white;
+}
+
+.doubts:hover{
+    color: white;
+}
+
+.rgt:hover{
+    color: white;
+} 
+.site:hover{
+    color: white;
+}
+
+/*Texto*/
+.h1-text{
+    max-width: 550px;
+    margin: 0 auto;
+    border-radius: 1em;
+    background-color: var(--fundo);
+    margin-top: 1em;
+    border: 2px solid var(--borda);
 }
 
 .fs-text{
-    color: yellow;
-    text-align: end;
+    color: var(--letras);
+    text-align: center;    
+    justify-content: center;
+    padding: 0.1em;    
 }
 
+/* Colunas Geral*/
 .conteudo{
     display: flex;
     flex-wrap: wrap;
@@ -42,15 +80,16 @@ body{
 }
 
 /*Coluna 1*/
+
 .column1{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    max-width: 960px;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
-    width: 20%;
-    border-radius: 5em;     
-    margin-right: 2em;
+    max-width: 260px;  
 }
 
 .localFoto{
@@ -58,13 +97,17 @@ body{
     border-radius: 50%;
     overflow: hidden;
     width: 60%;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 .login{    
     margin-top: 1.5em;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: orangered;
+    color: var(--letras);
+    background-color: var(--fundo);
+    border-radius: 1em;
+    padding: 0.1em 0.5em;
+    border: 2px solid var(--borda);
 }
 
 .localname{
@@ -89,29 +132,34 @@ body{
     width: auto;
     border-radius: 0.5em;
     padding: 0.5em;
-    border-color: orangered;
+    border-color: var(--borda);
     margin-top: 1em;
     margin-bottom: 2em;
+    cursor: pointer;
+    
 }
 
 /*Coluna 2*/
-
 .column2{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;   
+    flex-direction: column; 
+    max-width: 260px;
+    margin: 0 auto;
+    height: 65vh;  
     text-align: center;
-    justify-content: space-around;    
-    width: 20%;
-    height: 80vh;
-    border-radius: 5em;
+    justify-content: space-around;   
+    align-items: center;
 }
 
 .register{    
     font-family: Georgia, 'Times New Roman', Times, serif;
-    justify-content: space-around;
-    margin-top: 1em;
-    color: orangered;
+    color: var(--letras);
+    background-color: var(--fundo);
+    border-radius: 1em;
+    border: 2px solid var(--letras);
+    max-width: 210px;
+    padding: 0.1em;    
 }
 
 .name, .lastname, .mail, .password, .confirmPassword, .numberIdtfct, .birthDate, .phone, .zipCode{
@@ -124,22 +172,30 @@ body{
 }
 
 .buttonRgt{
-    width: 50%;
-    margin-left: 5em;
+    width: auto;    
     border-radius: 1em;
-    border-color: orangered;
+    border-color: var(--borda);
     padding: 0.3em;
+    cursor: pointer;    
 }
     
 
 /*Footer*/
+.f1{
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 1em;background-color: var(--fundo);
+}
+
 .p1{
     text-align: center;
     font-size: 12px;
-    color: black;    
+    color: var(--letras);
+    padding: 0.2em;    
 } 
 
 .p1a{
     text-decoration: none;
-    color: black;
+    color:var(--letras);
+    
 }
