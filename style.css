@@ -1,19 +1,23 @@
 :root{
-    --letras: #006400;
-    --fundo: #DAA520;
-    --borda: #006400;
+    --letras: rgb(255, 255, 255);   
+    --fundo1: rgb(0, 0, 0, 0.4);
+    --fundo2: rgb(0, 0, 0, 0.2);    
+    --contornoCaixa: rgb(65,105,225);
+    --borda: rgb(65,105,225);
+    --efeito: rgb(247, 92, 105);
 }
 
 *{
     margin: 0;
-    padding: 0;    
+    padding: 0; 
 }
 
 body{
-    background-image: url(img/solo3.jpg); 
+    background-image: url(img/cactos.jpg); 
 }
 
 /*Menu de navegação - nav-bar*/
+
 .nav-bar{
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +27,7 @@ body{
     height: 2em;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--fundo);
+    background-color: var(--fundo2);
     margin-top: 0.5em;
     border-radius: 1em;
     border: 2px solid var(--borda);       
@@ -31,33 +35,34 @@ body{
 
 .company, .doubts, .rgt, .site{
     text-decoration: none;
-    font-family:'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     color:var(--letras);
     margin-left: 0.5em;
 }
 
 .company:hover{
-    color: white;
+    color: var(--efeito);
 }
 
 .doubts:hover{
-    color: white;
+    color: var(--efeito);
 }
 
 .rgt:hover{
-    color: white;
+    color: var(--efeito);
 } 
 .site:hover{
-    color: white;
+    color: var(--efeito);
 }
 
 /*Texto*/
+
 .h1-text{
     max-width: 550px;
     margin: 0 auto;
     border-radius: 1em;
-    background-color: var(--fundo);
+    background-color: var(--fundo2);
     margin-top: 1em;
     border: 2px solid var(--borda);
 }
@@ -70,13 +75,17 @@ body{
 }
 
 /* Colunas Geral*/
+
 .conteudo{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    flex-direction: row;   
+    background: var(--fundo1);
+    max-width: 760px;
+    border-radius: 1em;
+    border: 2px solid var(--borda); 
+    margin: 2em 0 2em 19em; 
+    padding-top: 0.5em;  
 }
 
 /*Coluna 1*/
@@ -85,7 +94,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    max-width: 960px;
+    max-width: 260px;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
@@ -102,40 +111,41 @@ body{
 
 .login{    
     margin-top: 1.5em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--letras);
-    background-color: var(--fundo);
+    background-color: var(--fundo2);
     border-radius: 1em;
     padding: 0.1em 0.5em;
-    border: 2px solid var(--borda);
+    border: 2px solid var(--contornoCaixa);
 }
 
 .localname{
     margin-top: 2em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif serif;
     text-align: center;
     padding: 0.5em;
     border-radius: 1em;
-    border-color: #FFC300;
+    border-color: var(--contornoCaixa);
 }
 
 .localpassword{
     margin-top: 1em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif serif;
     text-align: center;
     padding: 0.5em;
     border-radius: 1em;
-    border-color: #FFC300;
+    border-color: var(--contornoCaixa);
 }
 
 .buttonCdt{
     width: auto;
     border-radius: 0.5em;
     padding: 0.5em;
-    border-color: var(--borda);
+    border-color: var(--contornoCaixa);
     margin-top: 1em;
     margin-bottom: 2em;
     cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
@@ -148,54 +158,116 @@ body{
     margin: 0 auto;
     height: 65vh;  
     text-align: center;
-    justify-content: space-around;   
-    align-items: center;
+    justify-content: space-around;       
+}
+
+.ttRegistro{
+    margin-left: 1.5em;
+
 }
 
 .register{    
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--letras);
-    background-color: var(--fundo);
+    background-color: var(--fundo2);
     border-radius: 1em;
-    border: 2px solid var(--letras);
+    border: 2px solid var(--contornoCaixa);
     max-width: 210px;
-    padding: 0.1em;    
+    padding: 0.1em;      
 }
 
-.name, .lastname, .mail, .password, .confirmPassword, .numberIdtfct, .birthDate, .phone, .zipCode{
+.name, .mail, .password, .confirmPassword, .phone {
     margin-top: 1em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    padding: 0.1em;
+    padding: 0.2em;
     border-radius: 1em;
-    border-color: #FFC300;    
+    border-color: rgb(65,105,2250);
 }
+
 
 .buttonRgt{
     width: auto;    
     border-radius: 1em;
-    border-color: var(--borda);
-    padding: 0.3em;
-    cursor: pointer;    
+    border-color: var(--contornoCaixa);
+    padding: 0.4em;
+    cursor: pointer;
+    margin-top: auto;
+    font-family: Arial, Helvetica, sans-serif;   
 }
     
 
 /*Footer*/
 .f1{
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
-    border-radius: 1em;background-color: var(--fundo);
+    border-radius: 1em;
+    background-color: var(--fundo2);
 }
 
 .p1{
     text-align: center;
     font-size: 12px;
     color: var(--letras);
-    padding: 0.2em;    
+    padding: 0.2em;
+    font-family: Arial, Helvetica, sans-serif;    
 } 
 
 .p1a{
     text-decoration: none;
     color:var(--letras);
-    
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+/*--------------------------------------------*/
+/*PÁGINA SECUNDARIA - OBRIGADO PELO ACESSO*/
+/*--------------------------------------------*/
+
+.h1-text1{
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 1em;
+    background-color: var(--fundo2);
+    margin-top: 10em;
+    border: 2px solid var(--borda);
+}
+
+.connteudo{            
+    background: var(--fundo1);    
+    border-radius: 1em;
+    border: 2px solid var(--borda); 
+    margin: 10em 30em 2em 30em; 
+    height: 100px; 
+    padding: 1em 0 1em 0;   
+}
+
+.columnn1 {
+    display: flex;       
+    max-width: 300px;
+    margin: 0 auto; 
+    justify-content: space-around; 
+    margin-top: 1em;     
+}
+.vmrs{
+    text-align: center;
+}
+
+.lkdi {
+    width: 50px;
+    height: 50px;
+}
+
+.gthb {
+    width: 50px;
+    height: 50px;
+}
+
+.itgm {
+    width: 50px;
+    height: 50px;
+}
+
+i {
+    font-size:3em;
+    color: black;
 }
